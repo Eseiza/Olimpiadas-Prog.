@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>PerfectDestination</title>
+</head>
+<body>
+<!-- Sección principal -->
+    <div class="seccion-principal">
+        <div class="seccion-logo">
+            <div class="logo">🛬</div>
+            <div class="info-compania">
+                <h1>Perfect Destination</h1>
+                <p>Descubre el mundo</p>
+            </div>
+        </div>
+       
+        <div class="seccion-botones">
+            <button onclick="location.href='login.html'" class="boton-perfil">👤 Perfil</button>
+            <button class="boton-carrito" onclick="mostrarCarrito()">🛒 Carrito
+                <span class="contador-carrito" id="contadorCarrito">0</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Carrusel de imágenes -->
+    <div class="contenedor-carrusel">
+        <div class="carrusel">
+            <div class="pista-carrusel">
+                <div class="diapositiva-carrusel">
+                    <img src="https://rare-gallery.com/uploads/posts/576266-paris-background.jpg" alt="París" />
+                    <div class="superposicion-diapositiva">
+                        <div class="titulo-diapositiva">París</div>
+                        <div class="subtitulo-diapositiva">Ciudad del amor</div>
+                    </div>
+                </div>
+                <div class="diapositiva-carrusel">
+                    <img src="https://images.pexels.com/photos/1797161/pexels-photo-1797161.jpeg" alt="Roma" />
+                    <div class="superposicion-diapositiva">
+                        <div class="titulo-diapositiva">Roma</div>
+                        <div class="subtitulo-diapositiva">Historia eterna</div>
+                    </div>
+                </div>
+                <div class="diapositiva-carrusel">
+                    <img src="https://wallpapercat.com/w/full/b/5/1/292677-3840x2160-desktop-4k-london-background-image.jpg" alt="Londres" />
+                    <div class="superposicion-diapositiva">
+                        <div class="titulo-diapositiva">Londres</div>
+                        <div class="subtitulo-diapositiva">Tradición británica</div>
+                    </div>
+                </div>
+                <div class="diapositiva-carrusel">
+                    <img src="https://wallpapers.com/images/featured/fondods-de-tokio-a5xg7vf9sztlhp8k.jpg" alt="Tokio" />
+                    <div class="superposicion-diapositiva">
+                        <div class="titulo-diapositiva">Tokio</div>
+                        <div class="subtitulo-diapositiva">Modernidad asiática</div>
+                    </div>
+                </div>    
+                <div class="diapositiva-carrusel">
+                    <img src="https://www.hdwallpapers.in/download/statue_of_liberty_national_monument_new_york_city_4k_5k_hd_travel-3840x2160.jpg" alt="Nueva York" />
+                    <div class="superposicion-diapositiva">
+                        <div class="titulo-diapositiva">Nueva York</div>
+                        <div class="subtitulo-diapositiva">La gran manzana</div>
+                    </div>
+                </div>
+                <div class="diapositiva-carrusel">
+                    <img src="https://images.pexels.com/photos/20798699/pexels-photo-20798699.jpeg?cs=srgb&dl=pexels-davincidelasfotos-20798699.jpg&fm=jpg" alt="Buenos Aires" />
+                    <div class="superposicion-diapositiva">
+                        <div class="titulo-diapositiva">Buenos Aires</div>
+                        <div class="subtitulo-diapositiva">La ciudad de la furia</div>
+                    </div>
+                </div>
+            </div>
+            <div class="indicadores-carrusel">
+                <div class="indicador activo"></div>
+                <div class="indicador"></div>
+                <div class="indicador"></div>
+                <div class="indicador"></div>
+                <div class="indicador"></div>
+                <div class="indicador"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de paquetes -->
+    <div class="seccion-paquetes">
+        <h2 class="titulo-paquetes">Paquetes Turísticos</h2>
+        <p class="subtitulo-paquetes">Descubre nuestras ofertas exclusivas y vive experiencias inolvidables en los mejores destinos del mundo</p>
+
+        <div class="contenedor-paquetes">
+            <!-- París -->
+            <div class="tarjeta-paquete">
+                <img src="https://rare-gallery.com/uploads/posts/576266-paris-background.jpg" alt="París" class="imagen-paquete" />
+                <div class="etiqueta-precio">
+                    <div class="precio-desde">Desde</div>
+                    <div class="precio-valor">$1,299</div>
+                </div>
+                <div class="contenido-paquete">
+                    <div class="encabezado-paquete">
+                        <div class="icono-destino">🗼</div>
+                        <h3 class="nombre-paquete">París Romántico</h3>
+                    </div>
+                    <p class="descripcion-paquete">Enamórate de la Ciudad de la Luz con este paquete que incluye los lugares más románticos y emblemáticos de París.</p>
+                    <div class="caracteristicas-paquete">
+                        <div class="caracteristica"><div class="icono-caracteristica">✈️</div><span>Vuelo incluido</span></div>
+                        <div class="caracteristica"><div class="icono-caracteristica">🏨</div><span>5 noches</span></div>
+                        <div class="caracteristica"><div class="icono-caracteristica">🍽️</div><span>Desayuno</span></div>
+                    </div>
+                    <button class="boton-comprar" onclick="agregarAlCarrito('paris', 'París Romántico', 1299, 'https://rare-gallery.com/uploads/posts/576266-paris-background.jpg')">Comprar Paquete</button>
+                </div>
+            </div>
+
+            <!-- Roma -->
+            <div class="tarjeta-paquete">
+                <img src="https://images.pexels.com/photos/1797161/pexels-photo-1797161.jpeg" alt="Roma" class="imagen-paquete" />
+                <div class="etiqueta-precio">
+                    <div class="precio-desde">Desde</div>
+                    <div class="precio-valor">$1,149</div>
+                </div>
+                <div class="contenido-paquete">
+                    <div class="encabezado-paquete">
+                        <div class="icono-destino">🏛️</div>
+                        <h3 class="nombre-paquete">Roma Histórica</h3>
+                    </div>
+                    <p class="descripcion-paquete">Sumérgete en la historia eterna de Roma, visitando el Coliseo, el Vaticano y los lugares más icónicos del imperio.</p>
+                    <div class="caracteristicas-paquete">
+                        <div class="caracteristica"><div class="icono-caracteristica">✈️</div><span>Vuelo incluido</span></div>
+                        <div class="caracteristica"><div class="icono-caracteristica">🏨</div><span>4 noches</span></div>
+                        <div class="caracteristica"><div class="icono-caracteristica">🎭</div><span>Tours guiados</span></div>
+                    </div>
+                    <button class="boton-comprar" onclick="agregarAlCarrito('roma', 'Roma Histórica', 1149, 'https://images.pexels.com/photos/1797161/pexels-photo-1797161.jpeg')">Comprar Paquete</button>
+                </div>
+            </div>
+            
+            <!-- Tokio -->
+            <div class="tarjeta-paquete">
+                <img src="https://wallpapers.com/images/featured/fondods-de-tokio-a5xg7vf9sztlhp8k.jpg" alt="Tokio" class="imagen-paquete" />
+                <div class="etiqueta-precio">
+                    <div class="precio-desde">Desde</div>
+                    <div class="precio-valor">$1,599</div>
+                </div>
+                <div class="contenido-paquete">
+                    <div class="encabezado-paquete">
+                        <div class="icono-destino">🗾</div>
+                        <h3 class="nombre-paquete">Tokio Moderno</h3>
+                    </div>
+                    <p class="descripcion-paquete">Descubre la perfecta mezcla entre tradición y modernidad en la fascinante capital japonesa.</p>
+                    <div class="caracteristicas-paquete">
+                        <div class="caracteristica"><div class="icono-caracteristica">✈️</div><span>Vuelo incluido</span></div>
+                        <div class="caracteristica"><div class="icono-caracteristica">🏨</div><span>6 noches</span></div>
+                        <div class="caracteristica"><div class="icono-caracteristica">🍱</div><span>Experiencia gastronómica</span></div>
+                    </div>
+                    <button class="boton-comprar" onclick="agregarAlCarrito('tokio', 'Tokio Moderno', 1599, 'https://wallpapers.com/images/featured/fondods-de-tokio-a5xg7vf9sztlhp8k.jpg')">Comprar Paquete</button>
+                </div>
+            </div>
+            
+            <!-- Buenos Aires -->
+            <div class="tarjeta-paquete">
+                <img src="https://images.pexels.com/photos/20798699/pexels-photo-20798699.jpeg?cs=srgb&dl=pexels-davincidelasfotos-20798699.jpg&fm=jpg" alt="Buenos Aires" class="imagen-paquete" />
+                <div class="etiqueta-precio">
+                    <div class="precio-desde">Desde</div>
+                    <div class="precio-valor">$1,119</div>
+                </div>
+                <div class="contenido-paquete">
+                    <div class="encabezado-paquete">.
+                        <div class="icono-destino">𓉶</div>
+                        <h3 class="nombre-paquete">Buenos Aires Nocturna</h3>
+                    </div>
+                    <p class="descripcion-paquete">Sumérgete en la noche eterna de Buenos Aires, visitando el Teatro Corrientes y sus lugares más icónicos.</p>
+                    <div class="caracteristicas-paquete">
+                        <div class="caracteristica"><div class="icono-caracteristica">✈️</div><span>Vuelo incluido</span></div>
+                        <div class="caracteristica"><div class="icono-caracteristica">🏨</div><span>7 noches</span></div>
+                        <div class="caracteristica"><div class="icono-caracteristica">🍽️</div><span>Experiencia gastronómica</span></div>
+                    </div>
+                    <button class="boton-comprar" onclick="agregarAlCarrito('buenosaires', 'Buenos Aires Nocturna', 1119, 'https://images.pexels.com/photos/20798699/pexels-photo-20798699.jpeg?cs=srgb&dl=pexels-davincidelasfotos-20798699.jpg&fm=jpg')">Comprar Paquete</button>
+                </div>
+            </div>
+
+            <!-- Nueva York -->
+<div class="tarjeta-paquete">
+    <img src="https://www.hdwallpapers.in/download/statue_of_liberty_national_monument_new_york_city_4k_5k_hd_travel-3840x2160.jpg" alt="Nueva York" class="imagen-paquete" />
+    <div class="etiqueta-precio">
+        <div class="precio-desde">Desde</div>
+        <div class="precio-valor">$1,459</div>
+    </div>
+    <div class="contenido-paquete">
+        <div class="encabezado-paquete">
+            <div class="icono-destino">🗽</div>
+            <h3 class="nombre-paquete">Nueva York</h3>
+        </div>
+        <p class="descripcion-paquete">Sumérgete en la ciudad de Nueva York, conocida por sus rascacielos icónicos, su metrópolis vibrante y diversa.</p>
+        <div class="caracteristicas-paquete">
+            <div class="caracteristica"><div class="icono-caracteristica">✈️</div><span>Vuelo incluido</span></div>
+            <div class="caracteristica"><div class="icono-caracteristica">🏨</div><span>7 noches</span></div>
+            <div class="caracteristica"><div class="icono-caracteristica">🎭</div><span>Tours guiados</span></div>
+        </div>
+        <button class="boton-comprar" onclick="agregarAlCarrito('nuevayork', 'Nueva York', 1459, 'https://www.hdwallpapers.in/download/statue_of_liberty_national_monument_new_york_city_4k_5k_hd_travel-3840x2160.jpg')">Comprar Paquete</button>
+    </div>
+</div>
+
+<!-- Londres -->
+<div class="tarjeta-paquete">
+    <img src="https://wallpapercat.com/w/full/b/5/1/292677-3840x2160-desktop-4k-london-background-image.jpg" alt="Londres" class="imagen-paquete" />
+    <div class="etiqueta-precio">
+        <div class="precio-desde">Desde</div>
+        <div class="precio-valor">$1,399</div>
+    </div>
+    <div class="contenido-paquete">
+        <div class="encabezado-paquete">
+            <div class="icono-destino">💂🏼</div>
+            <h3 class="nombre-paquete">Londres</h3>
+        </div>
+        <p class="descripcion-paquete">Descubre la perfecta mezcla entre tradición y actualidad en la gran capital inglesa.</p>
+        <div class="caracteristicas-paquete">
+            <div class="caracteristica"><div class="icono-caracteristica">✈️</div><span>Vuelo incluido</span></div>
+            <div class="caracteristica"><div class="icono-caracteristica">🏨</div><span>6 noches</span></div>
+            <div class="caracteristica"><div class="icono-caracteristica">🎭</div><span>Tours guiados</span></div>
+        </div>
+        <button class="boton-comprar" onclick="agregarAlCarrito('londres', 'Londres', 1399, 'https://wallpapercat.com/w/full/b/5/1/292677-3840x2160-desktop-4k-london-background-image.jpg')">Comprar Paquete</button>
+    </div>
+</div>
+<!-- Modal del Carrito -->
+<div class="modal-carrito" id="modalCarrito">
+    <div class="contenido-modal">
+        <div class="cabecera-modal">
+            <div class="titulo-modal">Tu Carrito</div>
+            <button class="boton-cerrar" onclick="cerrarCarrito()">×</button>
+        </div>
+        <div id="contenidoCarrito"></div>
+        <div class="total-carrito">
+            <span>Total:</span>
+            <span id="totalCarrito">$0</span>
+        </div>
+        <div class="botones-carrito">
+            <button class="boton-vaciar" onclick="vaciarCarrito()">Vaciar</button>
+            <button class="boton-comprar-todo">Finalizar Compra</button>
+        </div>
+    </div>
+</div>
+<script src="car.js"></script>
+
+</body>
+</html>

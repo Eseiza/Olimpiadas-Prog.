@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login web</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="cl-icon/css/all.min.css">
+</head>
+<body>
+    <div class="contenedor">
+        <!-- Formulario de Inicio de Sesión -->
+        <form class="formulario" id="formularioInicioSesion">
+            <h1 class="tituloI">Inicio</h1>
+            <div class="campo">
+                <input type="text" name="nombreUsuario" class="entrada" placeholder="usuario" required>
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="campo">
+                <input type="password" name="contrasena" class="entrada" placeholder="contraseña" required>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <button type="submit" class="boton">Iniciar sesión</button>
+            <div class="pie">
+                ¿No tienes cuenta? <span class="enlace" onclick="mostrarRegistro()">Regístrate</span>
+            </div>
+        </form>
+
+        <!-- Formulario de Registro -->
+        <form class="formulario oculto" id="formularioRegistro">
+            <h1 class="tituloR">Registro</h1>
+            <div class="campo">
+                <input type="text" name="nombreCompleto" class="entrada" placeholder="nombre completo" required>
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="campo">
+                <input type="email" name="correoElectronico" class="entrada" placeholder="email" required>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="campo">
+                <input type="text" name="nombreUsuario" class="entrada" placeholder="usuario" required>
+                <i class="fa-solid fa-user-plus"></i>
+            </div>
+            <div class="campo">
+                <input type="password" name="contrasena" class="entrada" placeholder="contraseña" required>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <button type="submit" class="boton">Registrarse</button>
+            <div class="pie">
+                ¿Ya tienes cuenta? <span class="enlace" onclick="mostrarInicioSesion()">Inicia sesión</span>
+            </div>
+        </form>
+
+        <div class="banner">
+            <h1 class="t1">Perfect</h1><br>
+            <h1 class="t2">Destination</h1><br>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</html>
